@@ -1,32 +1,35 @@
-# google-translate-api [![Build Status](https://travis-ci.org/matheuss/google-translate-api.svg?branch=master)](https://travis-ci.org/matheuss/google-translate-api) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![Coverage Status](https://coveralls.io/repos/github/matheuss/google-translate-api/badge.svg?branch=master)](https://coveralls.io/github/matheuss/google-translate-api?branch=master) [![Known Vulnerabilities](https://snyk.io/test/npm/google-translate-api/badge.svg)](https://snyk.io/test/npm/google-translate-api)
+# @mjixiang/google-translate-api
+
+Forked from [matheuss/google-translate-api](https://github.com/matheuss/google-translate-api) and [matheuss/google-translate-token](https://github.com/matheuss/google-translate-token)
 
 A **free** and **unlimited** API for Google Translate :dollar::no_entry_sign:
+
 
 ## Features 
 
 - Auto language detection
 - Spelling correction
 - Language correction 
-- Fast and reliable – it uses the same servers that [translate.google.com](https://translate.google.com) uses
+- Fast and reliable – it uses the same servers that [translate.google.cn](https://translate.google.cn) uses
 
 ## Install 
 
 ```
-npm install --save google-translate-api
+npm install --save @mjixiang/google-translate-api
 ```
 
 ## Usage
 
-From automatic language detection to English:
+> [语言代码简称](languages.js)
+
+中文 -> English:
 
 ``` js
-const translate = require('google-translate-api');
+const translate = require('@mjixiang/google-translate-api');
 
-translate('Ik spreek Engels', {to: 'en'}).then(res => {
+translate('你好,世界!', {from: 'zh-cn', to: 'en'}).then(res => {
     console.log(res.text);
-    //=> I speak English
-    console.log(res.from.language.iso);
-    //=> nl
+    //=> Hello world!
 }).catch(err => {
     console.error(err);
 });

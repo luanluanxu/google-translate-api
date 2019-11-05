@@ -3,6 +3,13 @@ import test from 'ava';
 import languages from './languages';
 import translate from './index';
 
+translate('你好,世界!', {from: 'zh-cn', to: 'en'}).then(res => {
+    console.log(res.text);
+    //=> Hello world!
+}).catch(err => {
+    console.error(err);
+});
+
 test('translate without any options', async t => {
     try {
         const res = await translate('vertaler');

@@ -1,4 +1,4 @@
-# @mjixiang/google-translate-api
+# google-translate-cn
 
 Forked from [matheuss/google-translate-api](https://github.com/matheuss/google-translate-api) and [matheuss/google-translate-token](https://github.com/matheuss/google-translate-token)
 
@@ -15,17 +15,17 @@ A **free** and **unlimited** API for Google Translate :dollar::no_entry_sign:
 ## Install 
 
 ```
-npm install --save @mjixiang/google-translate-api
+npm install --save google-translate-cn
 ```
 
 ## Usage
 
-> [语言代码简称](languages.js)
+> [语言代码简称列表](languages.js)
 
 中文 -> English:
 
 ``` js
-const translate = require('@mjixiang/google-translate-api');
+const translate = require('google-translate-cn');
 
 translate('你好,世界!', {from: 'zh-cn', to: 'en'}).then(res => {
     console.log(res.text);

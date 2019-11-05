@@ -1,7 +1,8 @@
 {
-  "name": "@mjixiang/google-translate-api",
+  "name": "google-translate-cn",
   "version": "1.0.0",
-  "description": "A free and unlimited API for Google Translate",
+  "description": "A free and unlimited API for Google Translate (谷歌翻译)",
+  "author": "mjixiang <820396305@qq.com>",
   "main": "index.js",
   "scripts": {
     "test": "nyc ava",
